@@ -3,9 +3,9 @@ package com.cjm.eventb.stream;
 import org.springframework.cloud.stream.annotation.Output;
 import org.springframework.messaging.MessageChannel;
 
-public interface EventExchange {
+public interface EventOut {
 
-	@Output("eventChannel")
+	@Output
 	MessageChannel event();
 
 }

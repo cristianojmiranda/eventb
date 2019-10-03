@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class EventListener {
 
-	@StreamListener(target = "eventChannel")
+	@StreamListener(target = "event")
 	public void handle(String message) {
 
 		System.out.println("Received: " + message);

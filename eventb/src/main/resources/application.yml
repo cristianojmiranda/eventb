@@ -1,6 +1,10 @@
-spring:
-  cloud:
-    stream:
-      bindings:
-        eventChannel:
-          destination: events
+spring.cloud.stream:
+  bindings:
+    event:
+      destination: event
+      group: queue
+  rabbit:
+    bindings:
+      event:
+        consumer:
+          auto-bind-dlq: true
